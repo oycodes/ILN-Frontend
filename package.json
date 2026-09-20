@@ -6,9 +6,9 @@
     "node": ">=20.19.0 <21"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint",
     "knip": "knip",
     "env:check": "node scripts/check-env-example.mjs",
@@ -32,7 +32,7 @@
     "test:e2e:nightly": "playwright test e2e/testnet-smoke.spec.ts e2e/frontend-indexer-stats-reconciliation.spec.ts",
     "test:mutation": "stryker run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "chromatic": "chromatic --exit-zero-on-changes",
     "prepare": "husky",
     "generate:changelog": "npx git-cliff --config .gitcliff.toml",
